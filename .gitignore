@@ -1,0 +1,5 @@
+meroenv/
+__pycache__/
+*.csv
+*.json
+.env
