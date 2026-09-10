@@ -39,6 +39,6 @@ fig.update_layout(
     showlegend=True
 )
 
-fig.write_html("vegetable_price_history.html")
+fig.write_html("index.html")
 fig.show()
 print("Saved vegetable price history plot to vegetable_price_history.html")
