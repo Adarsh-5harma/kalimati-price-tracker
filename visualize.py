@@ -77,3 +77,8 @@ fig_heat.update_layout(
 fig_heat.write_html("heatmap.html")
 fig_heat.show()
 print("Heatmap saved.")
+
+
+from plotly.subplots import make_subplots
+fig_heat.write_html("heatmap.html")
+
