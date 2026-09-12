@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Vegetable Price Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #2c7a2c; text-align: center; }
+        p.subtitle { text-align: center; color: #666; }
+        .card { background: white; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 2px solid #2c7a2c; padding-bottom: 8px; }
+        .btn { display: inline-block; padding: 10px 20px; margin: 8px; background: #2c7a2c; color: white; text-decoration: none; border-radius: 5px; }
+        .btn:hover { background: #1a5c1a; }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0; }
+        .stat { background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center; }
+        .stat h3 { margin: 0; color: #2c7a2c; font-size: 1.8em; }
+        .stat p { margin: 5px 0 0; color: #666; font-size: 0.9em; }
+        footer { text-align: center; color: #999; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <h1>🥬 Nepal Vegetable Price Tracker</h1>
+    <p class="subtitle">Historical price trends from Kalimati Market (2020–2026)</p>
+
+    <div class="card">
+        <h2>📊 Key Findings</h2>
+        <div class="stats">
+            <div class="stat">
+                <h3>Rs 98</h3>
+                <p>Highest potato price (Oct 2020, Dashain season)</p>
+            </div>
+            <div class="stat">
+                <h3>5x</h3>
+                <p>Price swing in 3 months (Rs 16 → Rs 98)</p>
+            </div>
+            <div class="stat">
+                <h3>10,763</h3>
+                <p>Total data points across 5 vegetables</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📈 Price Trend Charts</h2>
+        <p>Interactive line charts showing daily price history for all vegetables.</p>
+        <a class="btn" href="index.html">View All Trends →</a>
+    </div>
+
+    <div class="card">
+        <h2>🌡️ Price Heatmaps</h2>
+        <p>Monthly average prices by year — instantly see seasonal patterns.</p>
+        <a class="btn" href="potato_white_heatmap.html">Potato</a>
+        <a class="btn" href="tomato_nepali_heatmap.html">Tomato</a>
+        <a class="btn" href="onion_indian_heatmap.html">Onion</a>
+        <a class="btn" href="cabbage_heatmap.html">Cabbage</a>
+        <a class="btn" href="mushroom_heatmap.html">Mushroom</a>
+    </div>
+
+    <div class="card">
+        <h2>📦 Data Source</h2>
+        <p>Data fetched from <a href="https://kalimatimarket.gov.np">Kalimati Fruits & Vegetable Market</a> via their public API. Updated manually.</p>
+    </div>
+
+    <footer>
+        <p>Built by Adarsh Sharma | Lumbini Technological University | 2026</p>
+        <p><a href="https://github.com/Adarsh-5harma/kalimati-price-tracker">View on GitHub</a></p>
+    </footer>
+</body>
+</html>
