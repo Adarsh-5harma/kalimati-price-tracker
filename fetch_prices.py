@@ -39,4 +39,3 @@ for name, commodity_id in vegetables.items():
     filename = name.lower().replace( " ", "_") + ".csv"
     df.to_csv(filename, index=False)
     print(f"Saved {len(df)} rows to {filename}")
-
