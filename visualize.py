@@ -42,3 +42,38 @@ fig.update_layout(
 fig.write_html("index.html")
 fig.show()
 print("Saved vegetable price history plot to vegetable_price_history.html")
+
+
+df = pd.read_csv("potato_white.csv")
+df["date"] = pd.to_datetime(df["date"])
+df["avg_price"] = df["avg_price"].astype(float)
+df["month"] = df["date"].dt.month
+df["year"] = df["date"].dt.year
+
+pivot = df.pivot_table(values="avg_price", index="month", columns="year", aggfunc="mean")
+print(pivot)
+
+import plotly.graph_objects as go
+
+month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+fig_heat = go.Figure(data=go.Heatmap(
+    z=pivot.values,
+    x=[str(c) for c in pivot.columns],
+    y=[month_names[m-1] for m in pivot.index],
+    colorscale="RdYlGn_r",
+    text=pivot.values.round(1),
+    texttemplate="%{text}",
+    hoverongaps=False,
+))
+
+fig_heat.update_layout(
+    title="Potato White — Monthly Average Price Heatmap (Rs/kg)",
+    xaxis_title="Year",
+    yaxis_title="Month",
+)
+
+fig_heat.write_html("heatmap.html")
+fig_heat.show()
+print("Heatmap saved.")
